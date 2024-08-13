@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <h2 id="fname">Ram</h2>
+        <input type="number" id="age" placeholder="Enter you Age" >
+        <button onclick="getValue()">Submit</button>
+        <script>
+            let fname = document.getElementById('fname').innerHTML;
+            function getValue(){
+                let age = document.getElementById('age').value;
+                document.getElementById('fname').innerHTML = fname + ' is ' + age + ' years old';
+            }
+        </script>
+    </body>
+</html>

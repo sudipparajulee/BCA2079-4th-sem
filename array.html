@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Array</title>
+    </head>
+    <body>
+        <script>
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            console.log(arr);
+            console.log(arr[0]);
+            console.log(arr[1]);
+            console.log(arr[5]);
+            console.log(arr.length); // length of array
+            console.log(arr.length - 1); // last index
+            console.log(arr[arr.length - 1]); // last element
+
+            // index of an element
+            console.log('Index of 6 is ' + arr.indexOf(6));
+
+            let fruits = ['Apple', 'Pineapple', 'Orange', 'Mango', 'Banana'];
+
+            // push an element to the end of the array
+            fruits.push('Grapes');
+            console.log(fruits);
+
+            //ascending order
+            fruits.sort();
+
+            //descending order
+            fruits.reverse();
+
+            console.log('The reverse order is '+ fruits);
+
+            // remove an element from the beginning of the array
+            fruits.shift();
+            console.log(fruits);
+
+            //splice
+            fruits.splice(2, 1); // remove 1 element from index 2
+            console.log(fruits);
+
+            //splice for adding element
+            fruits.splice(2, 0, 'Papaya', 'Kiwi');
+            console.log(fruits);
+
+            //for loop
+            for(let i=0; i<fruits.length; i++){
+                document.write(fruits[i] + '<br>');
+            }
+            document.write('<br>');
+
+            //for each loop
+            fruits.forEach(function(fruit){
+                document.write(fruit + '<br>');
+            });
+
+
+            //map
+            let numbers = [1, 2, 3, 4, 5];
+            let squares = numbers.map(myfunction);
+
+            function myfunction(value, index, array){
+                return value * value;
+            }
+
+            document.write(squares + '<br>');
+        </script>
+    </body>
+</html>

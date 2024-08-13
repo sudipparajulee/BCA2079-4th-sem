@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Display Clock</title>
+    </head>
+    <body>
+        <h2 id="clock"></h2>
+        <script>
+            let clock = document.getElementById('clock');
+            function updatetime()
+            {
+                let today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                let time = check(h) + ':' + check(m) + ':' + check(s);
+                clock.innerHTML = time;
+            }
+            updatetime();
+            setInterval(updatetime, 1000);
+
+            function check(x)
+            {
+                if(x < 10)
+                {
+                    x = '0' + x;
+                }
+                return x;
+            }
+        </script>
+    </body>
+</html>

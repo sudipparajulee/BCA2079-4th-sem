@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Arithmetic</title>
+        <style>
+            input{
+                display: block;
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter First Number" id="num1">
+        <input type="text" placeholder="Enter Second Number" id="num2">
+        <h3 id="result"></h3>
+        <input type="submit" value="Add" id="add">
+        <input type="submit" value="Subtract" onclick="subtract()">
+        <input type="submit" value="Multiply" onclick="multiply()">
+        <input type="submit" value="Divide" onclick="divide()">
+        <script>
+            document.getElementById('add').addEventListener('click', add);
+            function add()
+            {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) + parseInt(num2);
+                document.getElementById('result').innerHTML = 'The sum is ' + result;
+            }
+
+            function subtract()
+            {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) - parseInt(num2);
+                document.getElementById('result').innerHTML = 'The difference is ' + result;
+            }
+
+            function multiply()
+            {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) * parseInt(num2);
+                document.getElementById('result').innerHTML = 'The product is ' + result;
+            }
+
+            function divide()
+            {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) / parseInt(num2);
+                document.getElementById('result').innerHTML = 'The quotient is ' + result.toFixed(2);
+            }
+        </script>
+    </body>
+</html>
