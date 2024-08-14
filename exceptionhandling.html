@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Exception Handling</title>
+    </head>
+    <body>
+        <button id="btn">Click Me</button>
+        <script>
+            document.getElementById('btn').addEventListener('click', function(event){
+                try{
+                    let x = 10;
+                    let y = 0;
+                    if(y == 0){
+                        throw new Error('Division by zero');
+                    }
+                    let z = x/y;
+                    alert('Result: '+z);
+                }catch(e){
+                    alert('Error: '+e.message);
+                }
+            });
+        </script>
+</html>
