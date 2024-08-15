@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Validation with Regular Expression</title>
+        <style>
+            input{
+                display: block;
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" onsubmit="return validate()">
+            <input type="text" id="email" placeholder="Enter Email">
+            <input type="text" id="phone" placeholder="Enter Phone">
+            <input type="text" id="password" placeholder="Enter password">
+            <input type="text" id="confirm_password" placeholder="Confirm password">
+            <input type="submit" value="Register">
+        </form>
+        <script>
+            function validate()
+            {
+                let email = document.getElementById('email').value;
+                let phone = document.getElementById('phone').value;
+                let password = document.getElementById('password').value;
+                let cpassword = document.getElementById('confirm_password').value;
+
+                //phone must start with either 98 or 97 and must be 10 digits long
+                let phonepattern = /^(98|97)\d{8}$/;
+                let checkphone = phonepattern.test(phone);
+                if(!checkphone)
+                {
+                    alert('Invalid Phone Number, must be 98xxxxxxx or 97xxxxxxx');
+                    return false;
+                }
+
+                //email must contain @ and .
+                // let emailpattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
+                // let emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let emailpattern = /^[^\s@]{1,15}@[^\s@]+\.[^\s@]+$/;
+                let checkemail = emailpattern.test(email);
+                if(!checkemail)
+                {
+                    alert('Invalid Email');
+                    return false;
+                }
+
+                //password must be at least 8 characters long and must containe at least one uppercase, one lowercase, one number and one special character
+                let passwordpattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+            }
+        </script>
+    </body>
+</html>
