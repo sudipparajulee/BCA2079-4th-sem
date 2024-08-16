@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Get Elements By Name</title>
+    </head>
+    <body>
+        <h2>Select the fruits</h2>
+        <br>
+        Mango <input type="radio" name="fruit" value="Mango">
+        <br>
+        Apple <input type="radio" name="fruit" value="Apple">
+        <br>
+        <br>
+        <button onclick="displayFruit()">Display Fruit</button>
+        <script>
+            function displayFruit()
+            {
+                let fruits = document.getElementsByName("fruit");
+                if(fruits[0].checked) {
+                    alert("The selected fruit is: " + fruits[0].value);
+                } else if(fruits[1].checked) {
+                    alert("The selected fruit is: " + fruits[1].value);
+                } else {
+                    alert("Please select a fruit");
+                }
+            }
+        </script>
+    </body>
+</html>
