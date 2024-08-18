@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Loader Example on Page Start</title>
+    </head>
+    <body>
+        <div id="loader"></div>
+        <div id="content" style="display:none;">
+            <h1>Content Loaded</h1>
+            <p>This is the content that is loaded after the loader is displayed.</p>
+        </div>
+        <script>
+            document.getElementById("loader").innerHTML = "Loading...";
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            }, 3000);
+        </script>
+    </body>
+</html>
