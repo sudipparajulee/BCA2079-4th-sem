@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title> JavaScript Class and Object </title>
+</head>
+<body>
+    <h1>Class and Object</h1>
+   <script>
+         class Person {
+              constructor(name, age) {
+                this.name = name;
+                this.age = age;
+              }
+              greet() {
+                console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+              }
+         }
+         let person1 = new Person('Ram', 25);
+         let person2 = new Person('Shyam', 22);
+         person1.greet();
+         person2.greet();
+
+         //rectangle properties are width and height
+         let rectangle = {width: 10, height: 20};
+            console.log(rectangle.width);
+            console.log(rectangle.height);
+   </script>
+</html>
