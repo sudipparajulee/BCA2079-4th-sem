@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>JavaScript </title>
+    </head>
+    <body>
+        <h1>JavaScript typeof Operator</h1>
+        <p id="demo"></p>
+        <script>
+            let x = 5;
+            var y = "Hello";
+            var z = true;
+            var a;
+            document.getElementById("demo").innerHTML =
+            typeof(x) + "<br>" 
+            + typeof y + "<br>"
+            + typeof(z) + "<br>"
+            + typeof(a) + "<br>";
+
+            let email = "something@something.something";
+            let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let phonepattern = /^[0-9]{10}$/;
+            if(pattern.test(email)){
+                console.log("Valid Email");
+            }else{
+                console.log("Invalid Email");
+            }
+
+        </script>
+</html>
